@@ -32,6 +32,7 @@ files:
 build_steps:
     #- apt-get -y install libsm6 libxrender1 libfontconfig1
     - pip install -r requirements.txt
+    - pip install torch==1.4.0+cu100 torchvision==0.5.0+cu100 -f https://download.pytorch.org/whl/torch_stable.html
     # The if_gpu and if_cpu directives can be used to run build steps
     # conditionally depending on the build environment.
     - if_gpu: echo "Building in a GPU environment..."
