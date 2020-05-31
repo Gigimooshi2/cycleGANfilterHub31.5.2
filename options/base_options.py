@@ -131,6 +131,7 @@ class BaseOptions():
             if id >= 0:
                 opt.gpu_ids.append(id)
         if len(opt.gpu_ids) > 0:
+            print(torch._C._cuda_getDriverVersion())
             torch.cuda.set_device(opt.gpu_ids[0])
 
         self.opt = opt
